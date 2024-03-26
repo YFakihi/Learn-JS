@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findmaxmin(nbr =[]){
+            var max = nbr[0]
+            var min = nbr[0]
+            if(nbr === 0){
+                return null;
+            }
+            else {
+                for(var i = 0; i<= nbr.length ; i++){
+                    if(nbr[i] > max){
+                        max = nbr[i];
+                    }
+                    else if(nbr[i] < min){
+                        min = nbr[i];
+                    }
+                }
+                return[max,min];
+            }
+        }
+        s = findmaxmin([5,6,7,8,9]);
+        console.log(s);
+    </script>
+</body>
+</html>

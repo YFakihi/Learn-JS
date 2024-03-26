@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+    <h1 >ddd</h1>
+</body>
+</html>
+
+<script>
+    function calculate(){
+    const mtr2 = Number(prompt("entre your note: ")); 
+    const mtr1 = Number(prompt("entre your note: ")); 
+    const mtr3 = Number(prompt("entre your note: ")); 
+    const somme = mtr1 + mtr2 + mtr3;
+    const average = somme /3;
+    return average;
+
+   
+}
+
+function check(note){
+    if (note >= 10){
+        return "valide";  
+      }
+      else
+      return "invalide";  
+}
+
+function res(){
+    const notes = calculate();
+    const checke = check(notes);
+   return(`votre resaulte ${notes} => tu es ${checke}`);
+
+}
+
+const main = res();
+console.log(main);
+</script>

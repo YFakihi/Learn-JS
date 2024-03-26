@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+        // function Factorial(nbr){
+        //    if(nbr === 1 || nbr === 0){
+        //     return 1;
+        //      } 
+        //     return nbr * Factorial(nbr -1)
+        // }
+        // const a = 4;
+        // const res = Factorial(a);
+        // console.log(res);
+
+            function factorial(n){
+               
+                if(n === 0 || n === 1){
+                    return 1;
+                }
+                else{
+                    return n * factorial(n - 1);
+                }
+                
+
+
+            }
+
+            const a = 5;
+            const res = factorial(a);
+            console.log(res);
+        
+    </script>
+</body>
+</html>

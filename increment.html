@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">enter a number</label><br>
+
+    <button id="b1">increment</button>
+    <input type="number" id="nb"><br>
+    <button id="b2">decrement</button>
+
+    <script>
+        var n1 = parseInt(document.querySelector('#nb').value);
+        var b1 = document.querySelector('#b1');
+        var b2 = document.querySelector('#b2');
+        n1 = 0;
+        b1.addEventListener("click",()=>{
+            n1+=1;
+            console.log(n1);
+        });
+
+        b2.addEventListener("click",()=>{
+            n1-=1;
+            console.log(n1);
+        });     
+
+
+    
+
+
+
+        // function increment(){
+        //     var valueinput = parseInt(n1.value);
+        //     n1.value = valueinput +1;
+        //     console.log("number : "+ (n1.value)); 
+        // }
+        // function decrement(){
+        //     var valueinput = parseInt(n1.value);
+        //     n1.value = valueinput - 1;
+        //     console.log("number : "+ (n1.value)); 
+        // }
+
+        // b1.addEventListener('click', increment);
+        // b2.addEventListener('click', decrement);
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

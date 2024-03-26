@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Quiz</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+    </style>
+    <div id="quiz-container">
+        <h1>Quiz Time!</h1>
+        <p id="question"></p>
+        <div id="options-container"></div>
+        <p id="timer">Time remaining: <span id="time">10</span> seconds</p>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    
+
+    <script> 
+    document.addEventListener('DOMContentLoaded', function () {
+    const questions = [
+        {
+            question: 'What is the capital of France?',
+            options: ['Berlin', 'Madrid', 'Paris', 'Rome'],
+            correctAnswer: 'Paris'
+        },
+        {
+            question: 'Which planet is known as the Red Planet?',
+            options: ['Mars', 'Venus', 'Jupiter', 'Saturn'],
+            correctAnswer: 'Mars'
+        },
+        // Add more questions as needed
+    ];
+
+    let currentQuestionIndex = 0;
+    let timer;
+    let timeRemaining = 10; // seconds
+
+    function displayQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        document.getElementById('question').innerText = currentQuestion.question;
+
+        const optionsContainer = document.getElementById('options-container');
+        optionsContainer.innerHTML = '';
+
+        currentQuestion.options.forEach((option, index) => {
+            const button = document.createElement('button');
+            button.innerText = option;
+            button.addEventListener('click', () => checkAnswer(option));
+            optionsContainer.appendChild(button);
+        });
+
+        startTimer();
+    }
+
+    function startTimer() {
+        timeRemaining = 10;
+        document.getElementById('time').innerText = timeRemaining;
+
+        timer = setInterval(function () {
+            timeRemaining--;
+            document.getElementById('time').innerText = timeRemaining;
+
+            if (timeRemaining <= 0) {
+                clearInterval(timer);
+                checkAnswer(null); // Time's up
+            }
+        }, 1000);
+    }
+
+    function checkAnswer(selectedOption) {
+        clearInterval(timer);
+
+        const currentQuestion = questions[currentQuestionIndex];
+
+        if (selectedOption === currentQuestion.correctAnswer) {
+            alert('Correct!');
+        } else {
+            alert('Incorrect!');
+        }
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < questions.length) {
+            displayQuestion();
+        } else {
+            endQuiz();
+        }
+    }
+
+    function endQuiz() {
+        alert('Quiz complete! You can display the final score or perform any other action.');
+        // Additional actions or display the final score
+    }
+
+    // Event listener for the next button
+    document.getElementById('nextBtn').addEventListener('click', function () {
+        checkAnswer(null); // Move to the next question
+    });
+
+    // Start the quiz
+    displayQuestion();
+});
+
+    </script>
+</body>
+</html>

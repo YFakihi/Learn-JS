@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //M1
+        //    function findMax(nbr = []){
+        //         var r = 0; 
+        //         for (var i = 0; i < nbr.length; i++)
+        //         {
+        //             if (nbr[i] > r) {
+        //             r = nbr[i];
+        //         }
+
+        //         }
+        //         return r;
+        //     }
+
+        function findMax(nbr) {
+            if(!nbr || nbr.length === 0){
+                return null;
+            }else{
+                return  Math.max(...nbr);
+            }
+            
+        }
+
+        var b = findMax([2, 3, 4, 5, 6, 11]);
+        console.log(b);
+    </script>
+
+</body>
+
+</html>

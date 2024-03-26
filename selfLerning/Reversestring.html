@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function reverseWords(sentence) {
+ 
+    var wordsArray = sentence.split(' ');
+
+    var reversedWordsArray = wordsArray.reverse();
+
+
+    var reversedSentence = reversedWordsArray.join(' ');
+
+    return reversedSentence;
+}
+
+// Test cases
+var input1 = "Hello world!";
+var input2 = "JavaScript is awesome";
+
+console.log("Reversed sentence 1:", reverseWords(input1)); // Expected: "olleH !dlrow"
+console.log("Reversed sentence 2:", reverseWords(input2)); // Expected: "tpircSavaJ si emosewa"
+
+
+    </script>
+</body>
+</html>

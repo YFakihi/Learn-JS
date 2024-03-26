@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form >
+        <label for="">enter tow namber</label><br>
+        <input type="number" name="name" id="n1"><br><br>
+
+        <select name="opera" id="opera">
+            <option value="" selected>choiser un operateur</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br><br>
+
+       <input type="number" name="name" id="n2"><br><br>
+
+<span id="res"></span>
+        <button type="button" onclick="calculate()" id="btn">submit</button>
+    </form>
+    <script>
+
+
+function calculate() {
+    var n1 = parseFloat(document.getElementById('n1').value);
+    var n2 = parseFloat(document.getElementById('n2').value);
+    var opera = document.getElementById('opera').value;
+    var res;
+
+    var res;
+    switch (opera) {
+        case '+':
+          res = n1 + n2;
+          break;
+        case '-':
+          res = n1 - n2;
+          break;
+        case '*':
+          res = n1 * n2;
+          break;
+        case '/':
+
+          if (n2 === 0) {
+            document.getElementById('res').innerHTML = 'Cannot divide by zero.';
+            return;
+          }
+          res = n1 / n2;
+          break;
+        default:
+          document.getElementById('res').innerHTML = 'Invalid operator.';
+          return;
+      }
+    document.getElementById('res').innerHTML= 'resualt :' + res;
+}
+
+    </script>
+</body>
+
+</html>

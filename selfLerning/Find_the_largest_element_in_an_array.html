@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findLargestElement( a = []){
+            var r = 0;
+            for(let i = 0 ; i<= a.length; i++)
+            {
+                if(a[i] > r){
+                    r = a[i];
+                }
+            }
+            return r;
+        }
+
+        let s = findLargestElement([2,87,6,7]);
+        console.log(s);
+    </script>
+</body>
+</html>

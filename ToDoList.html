@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let listTask=[];
+
+        function addTask() {
+    const taskText = prompt('Enter your text:');
+    if (taskText !== null && taskText !== "") {
+        const task = {
+            text: taskText,
+        };
+        listTask.push(task);
+        console.log('Task added successfully.');
+    }
+}
+
+        while(true){
+        const choise = prompt(`choose an option:
+        1.Add Task 
+        2.Update Task 
+        3.Remove Task 
+        4.Exist`);
+
+        switch(choise){
+            case "1":
+                addtask();
+                break;
+            case "2":
+                Updatetask();
+                break;
+            case "3":
+                RemoveTask();
+                break;
+            case "4":
+                console.log('Exiting...');
+                break;
+            default:
+                console.log('invalid number');
+        }
+        }
+    </script>
+</body>
+</html>

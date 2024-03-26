@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function TriTableaux(arr,order){
+            if(order === "asc"){
+                arr.sort(function(a,b){
+                    return a - b;
+                });
+            }
+            else if(order === 'desc'){
+                arr.sort(function(a,b){
+                    return b - a;
+                })
+            }
+        }
+
+let array = [3, 1, 5, 2, 4];
+TriTableaux(array, "asc"); 
+console.log("croissant:", array);
+
+TriTableaux(array, "desc");
+console.log("décroissant:", array);
+
+    </script>
+</body>
+</html>
