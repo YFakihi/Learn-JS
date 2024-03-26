@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function extractSublist(arr, debut, fin) {
+    return arr.slice(debut, fin); // Utilise slice() pour extraire la sous-liste entre les indices début et fin
+}
+
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let debut = 2;
+let fin = 5;
+let subList = extractSublist(array, debut, fin);
+console.log(subList); // Output: [3, 4, 5]
+
+    </script>
+</body>
+</html>

@@ -7,13 +7,12 @@
 </head>
 <body>
     <script>
-        function unshiftfun(arr , element){
-            arr.unshift(element);
-            return arr;
+        function mapfun(arr){
+          
+                return arr.map(element=> element * 2);  
         }
-        let array = [1, 2, 3, 4, 5];
-        let v = 33;
-        let modifiedArray = unshiftfun(array,v);
+        let array = [1, 4, 5];
+        let modifiedArray = mapfun(array);
         console.log(modifiedArray); 
     </script>
 </body>
