@@ -18,7 +18,12 @@ function removeNumber(nbr){
 
    return res;
 }
-
-
 var a = removeNumber([1,3,4])
 console.log(a);
+
+ function test(a){
+        a.filter(s=> s!=3)
+        a.map(s => s*=s  )
+       let b= a.reduce(s=> s+=s)
+ }
+ 
