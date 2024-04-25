@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script>
         function capitalizeFirstLetter(sentence) {
             // Split the sentence into an array of words
             var splitWords = sentence.split(' ');
@@ -25,9 +15,6 @@
     
         var input2 = "JavaScript is awesome";
         console.log("Capitalized sentence:", capitalizeFirstLetter(input2)); 
-    </script>
+
     
 
-</body>
-
-</html>
